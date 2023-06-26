@@ -1,0 +1,11 @@
+import re
+
+tekst = "j3sometext C"
+
+reg = r"^[Jj].*(\s.*?[0-5]|[0-5].*?\s).*[Cc]$"
+provjera = re.search(reg, tekst)
+
+if provjera:
+    print(provjera.group())
+else:
+    print("pattern not found")
